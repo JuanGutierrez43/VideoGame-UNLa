@@ -24,8 +24,8 @@ class Juego(object):
      
         self.puntuacion = 0
         self.game_over = False
-        self.screen_resolution = screen_resolution
-        self.pantalla = pantalla
+        self.screen_resolution = screen_resolution # clase pantalla
+        self.pantalla = pantalla # clase de pygame
         self.fondo = Espacio(pantalla)
         ''' sonidos '''
         self.pulsar_sonido = pygame.mixer.Sound("laser5.ogg")
@@ -122,10 +122,35 @@ class Juego(object):
     def display_frame(self, pantalla):
          
         """ Muestra todo el juego sobre la pantalla. """
-        #pantalla.fill(BLANCO)
+        pantalla.fill(NEGRO)
         ''' imagen de fondo '''
-        imagen_defondo = pygame.image.load("Espacio2.jpg").convert()
-        self.pantalla.blit(imagen_defondo, [0, 0])
+        #Estrella
+        x=random.randrange(self.screen_resolution.LARGO_PANTALLA/2)
+        y=random.randrange(self.screen_resolution.ALTO_PANTALLA/2)
+        z=random.randrange(self.screen_resolution.LARGO_PANTALLA/2)
+        e=random.randrange(self.screen_resolution.ALTO_PANTALLA/2)
+        #Estrella dinámicas
+        pygame.draw.line(pantalla, BLANCO, [4*e, 4*z], [4*e, 4*z], random.randrange(5))# *
+        #Estrella estáticas
+        a=self.screen_resolution.LARGO_PANTALLA/2
+        b=self.screen_resolution.ALTO_PANTALLA/3
+        pygame.draw.line(pantalla, BLANCO, [a, b], [a, b], 1+random.randrange(3))# *
+        a=a/2
+        pygame.draw.line(pantalla, BLANCO, [a, b], [a, b], 1+random.randrange(2))# *
+        b=b/3
+        pygame.draw.line(pantalla, BLANCO, [a, b], [a, b], 1+random.randrange(3))# *
+        a=a/5
+        pygame.draw.line(pantalla, BLANCO, [a, b], [a, b], 1+random.randrange(2))# *
+        a=a*7
+        b=b*5
+        pygame.draw.line(pantalla, BLANCO, [a, b], [a, b], 1+random.randrange(2))# *
+        a=a*2
+        b=b+100
+        pygame.draw.line(pantalla, CIAN, [a, b], [a, b+2], 1+random.randrange(5))# *
+
+        
+        #imagen_defondo = pygame.image.load("Espacio2.jpg").convert()
+        #self.pantalla.blit(imagen_defondo, [0, 0])
         if self.game_over:   
             #fuente = pygame.font.Font("Serif", 25)
             fuente = pygame.font.SysFont("Serif", 25)
