@@ -25,6 +25,7 @@ def main():
     # Crea una instancia de la clase Juego
     juego = Juego(pantalla,screen_resolution)
     ''' musica op1'''
+    juego.Operation1.set_volume(0.1)
     juego.Operation1.play()
  
     # Bucle principal

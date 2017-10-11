@@ -24,12 +24,17 @@ class Juego(object):
      
         self.puntuacion = 0
         self.game_over = False
+        self.pause = False
         self.screen_resolution = screen_resolution # clase pantalla
         self.pantalla = pantalla # clase de pygame
         self.fondo = Espacio(pantalla)
         ''' sonidos '''
         self.pulsar_sonido = pygame.mixer.Sound("laser5.ogg")
         self.Operation1 = pygame.mixer.Sound("30 - Mission Accomplished.ogg")
+        #self.pulsar_pause = pygame.mixer.Sound("30 - Mission Accomplished.ogg")
+        if not pygame.mixer.get_init():
+            pygame.mixer.init(self.sampleRate, -16, 1, self.bufferSize)
+            pygame.mixer.set_num_channels(0)
         
         # Creamos la lista de sprites
         # Lista de cada bloque en el juego
@@ -60,11 +65,11 @@ class Juego(object):
     def procesa_eventos(self):
         """ Procesa todos los eventos. Devuelve un "True" si precisamos
             cerrar la ventana. """
-        pos = pygame.mouse.get_pos()
+        
         for evento in pygame.event.get():
             if evento.type == pygame.QUIT:
                 return True
-            elif evento.type == pygame.MOUSEBUTTONDOWN:
+            elif evento.type == pygame.MOUSEBUTTONDOWN and not self.pause:
                 # Disparamos un proyectil si el usuario presiona el botón del ratón
                 proyectil = Proyectil()
                 # Configuramos el proyectil de forma que esté donde el protagonista
@@ -76,7 +81,15 @@ class Juego(object):
                 # sonido
                 self.pulsar_sonido.play()
                 if self.game_over:
+                    pygame.mixer.unpause()
                     self.__init__(self.pantalla,self.screen_resolution)
+            elif evento.type == pygame.KEYDOWN and not self.game_over:
+                if not self.pause:
+                    self.pause=True     #pausa on
+                    pygame.mixer.pause()
+                else:
+                    self.pause=False    #pausa off
+                    pygame.mixer.unpause()
         return False
  
     def logica_de_ejecucion(self):
@@ -84,7 +97,7 @@ class Juego(object):
         Este método se ejecuta para cada fotograma. 
         Actualiza posiciones y comprueba colisiones.
         """
-        if not self.game_over:
+        if not self.game_over and not self.pause:
              
             # Mueve todos los sprites
             self.listade_todoslos_sprites.update()
@@ -124,6 +137,8 @@ class Juego(object):
         """ Muestra todo el juego sobre la pantalla. """
         pantalla.fill(NEGRO)
         ''' imagen de fondo '''
+        #imagen_defondo = pygame.image.load("Espacio.png").convert()
+        #self.pantalla.blit(imagen_defondo, [0, 0])  
         #Estrella
         x=random.randrange(self.screen_resolution.LARGO_PANTALLA/2)
         y=random.randrange(self.screen_resolution.ALTO_PANTALLA/2)
@@ -148,15 +163,15 @@ class Juego(object):
         b=b+100
         pygame.draw.line(pantalla, CIAN, [a, b], [a, b+2], 1+random.randrange(5))# *
 
-        
-        #imagen_defondo = pygame.image.load("Espacio2.jpg").convert()
-        #self.pantalla.blit(imagen_defondo, [0, 0])
-        if self.game_over:   
+         
+        if self.game_over:
             #fuente = pygame.font.Font("Serif", 25)
+            pygame.mixer.pause()
+            pygame.time.wait(120)#descanza el cpu cuando no lo uso
             fuente = pygame.font.SysFont("Serif", 25)
             texto = fuente.render("Game Over, haz click para volver a jugar", False, BLANCO)
             self.pantalla.blit(texto, [self.screen_resolution.LARGO_PANTALLA//4, self.screen_resolution.ALTO_PANTALLA//2])
-        if not self.game_over:
+        if not self.game_over and not self.pause:
             fuente = pygame.font.SysFont("Serif", 25)
             string = "Operation 1 "
             string2 = "Points: "
@@ -165,5 +180,10 @@ class Juego(object):
             self.listade_todoslos_sprites.draw(self.pantalla)
             self.pantalla.blit(texto, [self.screen_resolution.LARGO_PANTALLA//12, self.screen_resolution.ALTO_PANTALLA//10])
             self.pantalla.blit(texto2, [self.screen_resolution.LARGO_PANTALLA//12, self.screen_resolution.ALTO_PANTALLA//6])
-
-        pygame.display.flip()
+        if self.pause:
+            pygame.time.wait(120)#descanza el cpu cuando no lo uso
+            fuente = pygame.font.SysFont("Serif", 25)
+            texto = fuente.render("Pause, pulse una tecla para volver a jugar", False, BLANCO)
+            self.pantalla.blit(texto, [self.screen_resolution.LARGO_PANTALLA//4, self.screen_resolution.ALTO_PANTALLA//2])
+       
+        pygame.display.update()
