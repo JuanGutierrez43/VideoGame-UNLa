@@ -57,14 +57,14 @@ class Juego(object):
         self.lista_proyectiles = pygame.sprite.Group()
         
         #  Creamos los bloques de sprites
-        for i in range(30):
+        for i in range(100):
             # Esto representa un objeto bloque
             ''' envio el objeto resolucion de pantalla '''
             bloque = Bloque(AZUL,self.screen_resolution)
 
             # Configuramos una ubicacion aleatoria para el bloque
             bloque.rect.x = random.randrange(self.screen_resolution.LARGO_PANTALLA)
-            bloque.rect.y = random.randrange(350)
+            bloque.rect.y = -1000+random.randrange(900)
 
             # Anadimos el bloque a la lista de objetos
             self.bloque_lista.add(bloque)
