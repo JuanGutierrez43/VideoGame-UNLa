@@ -1,15 +1,15 @@
 import pygame
 
-#gordo1=pygame.image.load('imagenes/Running1.PNG')
-#gordo2=pygame.image.load('imagenes/Running2.PNG')
-#gordo3=pygame.image.load('imagenes/Running3.PNG')
-#gordo4=pygame.image.load('imagenes/Running4.PNG')
-manzana=pygame.image.load('manzana.PNG')
-cereza=pygame.image.load('cereza.PNG')
-ensalada=pygame.image.load('ensalada.PNG')
-pochoclo=pygame.image.load('pochoclos.PNG')
-panqueques=pygame.image.load('panqueques.PNG')
-torta=pygame.image.load('torta.PNG')
+gordo1=pygame.image.load('Imagenes/chavon1.PNG')
+gordo2=pygame.image.load('Imagenes/chavon2.PNG')
+gordo3=pygame.image.load('Imagenes/chavon3.PNG')
+gordo4=pygame.image.load('Imagenes/chavon4.PNG')
+manzana=pygame.image.load('Imagenes/manzana.PNG')
+cereza=pygame.image.load('Imagenes/cereza.PNG')
+ensalada=pygame.image.load('Imagenes/ensalada.PNG')
+pochoclo=pygame.image.load('Imagenes/pochoclos.PNG')
+panqueques=pygame.image.load('Imagenes/panqueques.PNG')
+torta=pygame.image.load('Imagenes/torta.PNG')
 #fondo=pygame.image.load('imagenes/manzana.PNG')
 #gordo_list=[gordo1,gordo2,gordo3,gordo4]
 

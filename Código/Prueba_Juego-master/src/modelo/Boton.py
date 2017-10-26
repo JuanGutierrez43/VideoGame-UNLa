@@ -1,8 +1,3 @@
-'''
-Created on 26 oct. 2017
-
-@author: jose_
-'''
 import pygame
 
 class boton(pygame.sprite.Sprite):

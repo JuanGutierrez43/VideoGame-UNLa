@@ -1,8 +1,3 @@
-'''
-Created on 13 oct. 2017
-
-@author: jose_
-'''
 ''' Clase Pantalla'''
 import pygame
 import random

@@ -1,9 +1,4 @@
-'''
-Created on 13 oct. 2017
-
-@author: jose_
-'''
-''' inicio del Programa '''
+import pygame
 from Game_Play import *
 from Game_Menu import *
 # Import Modulos
@@ -34,6 +29,10 @@ def main():
     ''' musica op1'''
     # juego.Operation1.set_volume(0.1)
     # juego.Operation1.play()
+    
+    pygame.mixer.music.load('Imagenes/musica.ogg')
+    pygame.mixer.music.play()
+    #pygame.mixer.music.get_volume(0.5)
 
     # Bucle principal
     while not hecho:        
