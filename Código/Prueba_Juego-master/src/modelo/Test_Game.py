@@ -1,4 +1,3 @@
-''' inicio del Programa '''
 # Import Modulos
 from Game_Menu import *
 from Game_Play import *
