@@ -26,6 +26,7 @@ class Game_Play():
         self.fruta2 = Fruta()
         self.fondo1 = Fondo()
         ''' Sonidos '''
+        self.crunch_sonido = pygame.mixer.Sound("sounds/Crunch_I.ogg")
         #self.pulsar_sonido = pygame.mixer.Sound("sounds/laser5.ogg")
         #self.Operation1 = pygame.mixer.Sound("sounds/30 - Mission Accomplished.ogg")
         #music = os.path.join('sounds', '34 - A Violent Conquest.mp3')
@@ -67,13 +68,16 @@ class Game_Play():
         self.t+=1
         if self.t>1:
             self.t=0
-           
+        crunch=False
         #colisiones
         if self.fruta1.rect.colliderect(self.player1.rect):
             self.fruta1.update(self.pantalla,1)
+            crunch=True
         if self.fruta2.rect.colliderect(self.player1.rect):
             self.fruta2.update(self.pantalla,1)
-        
+            crunch=True
+        if crunch:
+            self.crunch_sonido.play()
     """ Se Dibuja todo el juego """  
     def display_frame(self, pantalla):
         # Dibuja el fotograma actual

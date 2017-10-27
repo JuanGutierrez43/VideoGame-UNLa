@@ -19,6 +19,10 @@ class Fruta(pygame.sprite.Sprite):
 
     def mover(self,vx):
         self.rect.move_ip(vx,0)
+        if self.rect.left<0:
+            self.rect.left=850+random.randrange(200)
+        if self.rect.top<0:
+            self.rect.top=400+random.randrange(100)
     
     def update(self,superficie,nuevo):
         
