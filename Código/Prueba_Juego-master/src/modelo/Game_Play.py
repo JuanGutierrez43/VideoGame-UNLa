@@ -1,8 +1,3 @@
-'''
-Created on 13 oct. 2017
-
-@author: jose_
-'''
 ''' Clase Juego '''
 # Importamos las bibliotecas
 from Colores import *
@@ -88,7 +83,3 @@ class Game_Play():
         self.fruta2.update(self.pantalla,0)
         self.player1.update(self.pantalla,self.vx,self.vy,self.t)
         pygame.display.update()
-         
-
-
-

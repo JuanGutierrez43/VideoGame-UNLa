@@ -1,18 +1,12 @@
-'''
-Created on 13 oct. 2017
-
-@author: jose_
-'''
-''' Clase Alimentos '''
 import random
 import pygame
 
 class Fruta(pygame.sprite.Sprite):
     ''' Este clase representa alimento que es recogido por el protagonista. '''
     def __init__(self):
-        self.manzana = pygame.image.load('Imagen\manzana.PNG')
-        self.cereza = pygame.image.load('Imagen\cereza.PNG')
-        self.ensalada = pygame.image.load('Imagen\ensalada.PNG')
+        self.manzana = pygame.image.load('Imagenes\manzana.PNG')
+        self.cereza = pygame.image.load('Imagenes\cereza.PNG')
+        self.ensalada = pygame.image.load('Imagenes\ensalada.PNG')
         
         self.imagenes = [self.manzana,self.cereza,self.ensalada] # Agregar nueva fruta aqui
         self.imagen_actual=random.randrange(len(self.imagenes)) # trae aleatorio una fruta gracias a len(self.imagenes)

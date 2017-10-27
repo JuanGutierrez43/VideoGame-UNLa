@@ -1,10 +1,3 @@
-'''
-Created on 13 oct. 2017
-
-@author: jose_
-'''
-# Definimos algunos colores
-
 NEGRO   = (  0,   0,   0)
 BLANCO  = (255, 255, 255)
 AMARILLO= (255, 255,   0)
