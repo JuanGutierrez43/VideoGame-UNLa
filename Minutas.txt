@@ -1,0 +1,78 @@
+-agosto-
+día 17:
+selección de recursos humanos
+día 18:
+nuevo artefacto para el proyecto: GIT, kakamba o trello
+aprender usar git
+día 25:
+se aprendió y se necesita el artefacto técnicas de pruebas de testing
+se crea repositorio github
+se envían los nombres de usuarios de github al grupo de trabajo: Juan Martín Gutierrez(autor)
+https://github.com/JuanGutierrez43/VideoGame-UNLa
+día 29:
+aprender usar Python y usos de un ídem como eclipse o geany
+-septiembre-
+día 1:
+se envía correo con todos los datos a los profesores
+Nicolas Madera 30887941
+Lucia Merlino 40008847
+Marina Marin 34798888
+Juan Martín Gutierrez 40396098
+José Victor Ibáñez 36068006
+aprender usar kanbam /o trello y sus tareas
+día 12:
+aprender distintos ambientes de trabajo, con uso de virtualizadores y S.O Linux
+día 18:
+se envían los nombres de usuarios de trello
+se organiza por primera vez las tareas en trello al grupo de trabajo: Marina Marin(autor)
+Usuarios:
+ Juan Gutierrez: juanmgutierez43
+ Nicolas Madera: nicolasmadera
+ José Victor Ibáñez: Victor-UNLa
+ Lucia Merlino: luciamerlino
+día 20:
+	-1ra Reunión formal- para practicar las herramientas git y usos de comandos
+presentes Juan, Lucia, Nicolas, Victor
+día 22:
+clase de repaso de los comandos de Git
+-octubre-
+día 1:
+primera muestra de juego hecho en Python por Victor(autor)
+día 6:
+clase de repaso y entrega de fechas del 1er parcial
+día 11:
+se avisa al grupo los temas de parcial y contenidos a estudiar
+día 11:
+se resuelven problemas con el material didáctico al grupo previo al parcial
+día 12:
+nuevo material de scrum por juan(autor), y explicaciones de git
+día 21:
+primeros avances del juego, selección del personaje y sus objetos por Lucia
+se logra la aceptación total del grupo por parte de la selección del personaje
+se discute la historia del jugador
+se discute la temática del jugador
+día 24:
+se resuelve colisiones del personaje con los objetos por Victor
+día 25:
+se discute y se implementa el menú en el juego por Lucia con ayuda de victor
+día 26:
+se resuelve el menú por victor
+se agrega música al juego por Lucia
+se discute y se acepta el nombre del juego: chubby boy
+día 27:
+	-2da Reunión formal- para debatir la temática del juego
+se tomó decisiones en:
+limite pantalla para el jugador
+puntos y porcentajes
+vidas 3 puntos, se restan por comida quemada o negra
+premios solo para el 100%
+caso distintos son:
+50-50 = usted está en equilibro premio por asíntota
+vegetariano >50 = gano por vegetariano
+usted va a gozar de buena salud
+popularidad >50 = gano por popularidad
+usted es muy popular con sus amigos
+menú se agrega dificultad
+quiere decir
+fácil 10 comidas
+difícil 25 comidas
