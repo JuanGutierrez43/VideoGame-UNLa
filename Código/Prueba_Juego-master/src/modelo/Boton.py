@@ -5,7 +5,7 @@ Created on 26 oct. 2017
 '''
 import pygame
 
-class boton(pygame.sprite.Sprite):
+class Boton(pygame.sprite.Sprite):
     def __init__(self,conluz,sinluz,x=200,y=200):
         self.imagen_normal=conluz
         self.imagen_seleccion=sinluz

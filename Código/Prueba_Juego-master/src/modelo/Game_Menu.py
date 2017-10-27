@@ -4,9 +4,9 @@ Created on 26 oct. 2017
 @author: jose_
 '''
 # Importamos las bibliotecas
-from Boton import *
 import pygame
 import random
+from Boton import *
 
 class Game_Menu():
     
@@ -25,8 +25,8 @@ class Game_Menu():
         self.pos= pygame.mouse.get_pos()
         self.image = pygame.Surface([30, 30])
         self.rect = self.image.get_rect()
-        self.botonini=boton(self.conluz,self.sinluz,10,200)
-        self.botonsal=boton(self.conluz1,self.sinluz1,10,500)
+        self.botonini=Boton(self.conluz,self.sinluz,10,200)
+        self.botonsal=Boton(self.conluz1,self.sinluz1,10,500)
         ''' sonidos '''
         
     def procesa_eventos(self):

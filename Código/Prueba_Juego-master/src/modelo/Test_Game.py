@@ -4,9 +4,9 @@ Created on 13 oct. 2017
 @author: jose_
 '''
 ''' inicio del Programa '''
-from Game_Play import *
-from Game_Menu import *
 # Import Modulos
+from Game_Menu import *
+from Game_Play import *
 
 def main():
      
