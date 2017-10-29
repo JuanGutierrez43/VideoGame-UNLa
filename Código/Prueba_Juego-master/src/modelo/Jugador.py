@@ -4,7 +4,7 @@ import pygame
 
 class Jugador(pygame.sprite.Sprite): #hereda los modulos de sprite
     """ Esta clase representa al protagonista. """
-    def __init__(self):
+    def __init__(self,screen_resolution):
         #creo 4 imagenes
         self.imagen1=pygame.image.load("Imagenes\chavon1.png").convert_alpha()
         self.imagen2=pygame.image.load("Imagenes\chavon2.png").convert_alpha()
@@ -19,10 +19,10 @@ class Jugador(pygame.sprite.Sprite): #hereda los modulos de sprite
         self.imagen_actual=0
         self.imagen=self.imagenes[self.imagen_actual][0]
         self.rect=self.imagen.get_rect()
-        self.rect.topleft=(300,300)
+        self.rect.topleft=(350,350)
         self.rect.top,self.rect.left=(350,0)#par ver si se esta moviendo
         self.estamoviendo=False
-        
+        self.screen_resolution = screen_resolution # clase pantalla
         # 0 si va ala derecha 1 si va la izquierda
         self.orientacion=0
         
@@ -45,9 +45,23 @@ class Jugador(pygame.sprite.Sprite): #hereda los modulos de sprite
         # si el t==1 (auxiliar) y se esta moviendo entonces cambiar la imagen
         if t==1 and self.estamoviendo:
             self.nextimage()
+        
+        # mover el rectangulo dentro de la pantalla
+        
+        if (self.rect.left>=0 and self.rect.left<=self.screen_resolution.LARGO_PANTALLA-100) and (self.rect.top>=350 and self.rect.top<=self.screen_resolution.ALTO_PANTALLA-100):
+            self.mover(vx*5, vy*3)
+        else:
+            aux_left=self.rect.left
+            aux_top=self.rect.top
+            if self.rect.left<0:
+                self.rect.left=aux_left+1
+            if self.rect.left>self.screen_resolution.LARGO_PANTALLA-100:
+                self.rect.left=aux_left-1
+            if self.rect.top<350:
+                self.rect.top=aux_top+1
+            if self.rect.top>self.screen_resolution.ALTO_PANTALLA-100:
+                self.rect.top=aux_top-1
             
-        # mover el rectangulo    
-        self.mover(vx, vy)
         
         #self.imagen va ser la imagen que este en la orientacion y en el numero de imagen_actual
         self.imagen=self.imagenes[self.orientacion][self.imagen_actual]

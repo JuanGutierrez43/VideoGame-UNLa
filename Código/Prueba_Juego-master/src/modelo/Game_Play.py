@@ -18,10 +18,10 @@ class Game_Play():
         self.pantalla = pantalla # clase de pygame
         self.vx = 0
         self.vy = 0
-        self.velocidad = 4
+        self.velocidad = 1
         self.t = 0
         ''' Sprite ''' 
-        self.player1 = Jugador()
+        self.player1 = Jugador(screen_resolution)
         self.fruta1 = Fruta()
         self.fruta2 = Fruta()
         self.fondo1 = Fondo()

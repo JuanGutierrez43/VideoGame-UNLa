@@ -35,7 +35,7 @@ def main():
 
     # Bucle principal
     while not hecho:        
-         
+        
         # Procesa los eventos (pulsaciones del teclado, clicks del raton, etc.)
         if not menu.mostrar_Menu:
             hecho = menu.procesa_eventos()
