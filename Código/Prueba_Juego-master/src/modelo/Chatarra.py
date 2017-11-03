@@ -1,19 +1,19 @@
 import random
 import pygame
 
-class Fruta(pygame.sprite.Sprite):
+class Chatarra(pygame.sprite.Sprite):
     ''' Este clase representa alimento que es recogido por el protagonista. '''
     def __init__(self):
-        self.manzana = pygame.image.load('Imagen\manzana.PNG')
-        self.cereza = pygame.image.load('Imagen\cereza.PNG')
-        self.ensalada = pygame.image.load('Imagen\ensalada.PNG')
+        self.torta = pygame.image.load('Imagen\pastel.PNG')
+        self.panqueques = pygame.image.load('Imagen\panqueques.PNG')
+        self.pochoclo = pygame.image.load('Imagen\pochoclos.PNG')
         
-        self.imagenes = [self.manzana,self.cereza,self.ensalada] # Agregar nueva fruta aqui
+        self.imagenes = [self.torta,self.panqueques,self.pochoclo] # Agregar nueva fruta aqui
         self.imagen_actual=random.randrange(len(self.imagenes)) # trae aleatorio una fruta gracias a len(self.imagenes)
         self.imagen=self.imagenes[self.imagen_actual]
         self.rect=self.imagen.get_rect()
         self.rect.topleft=(50,50)
-        self.manzana_x = -4-random.randrange(7)
+        self.torta_x = -4-random.randrange(7)
 
         self.rect.top,self.rect.left=(400+random.randrange(100),850+random.randrange(200)) #empieza aqui
 
@@ -31,7 +31,8 @@ class Fruta(pygame.sprite.Sprite):
             self.imagen_actual=random.randrange(len(self.imagenes)) # trae aleatorio una fruta gracias a len(self.imagenes)
             self.imagen=self.imagenes[self.imagen_actual]
             
-        else:self.mover(self.manzana_x)
+        else:self.mover(self.torta_x)
+        
         
         #finalmente pintar en la pantalla
         superficie.blit(self.imagen,self.rect)

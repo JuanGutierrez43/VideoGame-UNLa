@@ -1,4 +1,3 @@
-# Importamos las bibliotecas
 import pygame
 import random
 from Boton import *
@@ -12,11 +11,11 @@ class Game_Menu():
         self.pantalla = pantalla # clase de pygame
         self.mostrar_Menu = False
         ''' Sprite ''' 
-        self.conluz=pygame.image.load("Imagenes\letra1.png")
-        self.sinluz=pygame.image.load("Imagenes\letra2.png")
-        self.conluz1=pygame.image.load("Imagenes\letra7.png")
-        self.sinluz1=pygame.image.load("Imagenes\letra8.png")
-        self.menu=pygame.image.load_extended("Imagenes\menu3.png")
+        self.conluz=pygame.image.load("Imagene_Menu\letra1.png")
+        self.sinluz=pygame.image.load("Imagene_Menu\letra2.png")
+        self.conluz1=pygame.image.load("Imagene_Menu\letra7.png")
+        self.sinluz1=pygame.image.load("Imagene_Menu\letra8.png")
+        self.menu=pygame.image.load_extended("Imagene_Menu\menu3.png")
         self.pos= pygame.mouse.get_pos()
         self.image = pygame.Surface([30, 30])
         self.rect = self.image.get_rect()

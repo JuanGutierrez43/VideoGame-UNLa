@@ -1,4 +1,3 @@
-# Import Modulos
 from Game_Menu import *
 from Game_Play import *
 
@@ -29,9 +28,9 @@ def main():
     # juego.Operation1.set_volume(0.1)
     # juego.Operation1.play()
     
-    pygame.mixer.music.load('Imagenes/musica.ogg')
-    pygame.mixer.music.play()
-    #pygame.mixer.music.get_volume(0.5)
+    pygame.mixer.music.load('Sounds/musica.ogg')
+    pygame.mixer.music.set_volume(0.1)
+    pygame.mixer.music.play(3)
 
     # Bucle principal
     while not hecho:        
@@ -54,6 +53,10 @@ def main():
         else:
             juego.display_frame(pantalla)
         
+        if juego.game_exit:
+            menu.mostrar_Menu=False
+            menu = Game_Menu(pantalla,screen_resolution)
+            juego = Game_Play(pantalla,screen_resolution)
         # Hace una pausa hasta el siguiente fotograma
         reloj.tick(20)
     # Cierra la ventana y sale    

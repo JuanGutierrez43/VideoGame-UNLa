@@ -1,4 +1,3 @@
-''' Clase Protagonista'''
 import random
 import pygame
 
@@ -6,10 +5,10 @@ class Jugador(pygame.sprite.Sprite): #hereda los modulos de sprite
     """ Esta clase representa al protagonista. """
     def __init__(self,screen_resolution):
         #creo 4 imagenes
-        self.imagen1=pygame.image.load("Imagenes\chavon1.png").convert_alpha()
-        self.imagen2=pygame.image.load("Imagenes\chavon2.png").convert_alpha()
-        self.imagen3=pygame.image.load("Imagenes\chavon3.png").convert_alpha()
-        self.imagen4=pygame.image.load("Imagenes\chavon4.png").convert_alpha()
+        self.imagen1=pygame.image.load("Imagen\chavon1.png").convert_alpha()
+        self.imagen2=pygame.image.load("Imagen\chavon2.png").convert_alpha()
+        self.imagen3=pygame.image.load("Imagen\chavon3.png").convert_alpha()
+        self.imagen4=pygame.image.load("Imagen\chavon4.png").convert_alpha()
 
         # creo la lista de las imaganes
         #el primer indice es la orientacion y el segundo la imagen
