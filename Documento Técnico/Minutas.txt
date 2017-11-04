@@ -76,3 +76,12 @@ menú se agrega dificultad
 quiere decir
 fácil 10 comidas
 difícil 25 comidas
+dia 28:
+	-3da Reunión formal- para debatir la documentacion
+
+	falta informe aquí
+
+
+
+dia 3:
+se agrega nueva version del juego, con puntos, pausa y reinicio
