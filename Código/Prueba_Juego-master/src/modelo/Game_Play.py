@@ -195,7 +195,7 @@ class Game_Play():
                 
                 
             # premios por finalizar juego
-            if self.resultado1+self.resultado2==100:
+            if self.resultado1+self.resultado2>=100:
                 #Premio 50-50
                 if self.resultado1==self.resultado2:
                     fondo=pygame.image.load('Imagen/Premio 50-50.PNG')
