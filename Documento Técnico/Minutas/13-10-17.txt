@@ -1,0 +1,18 @@
+Reunión: 4 ------------------------------------- Fecha: 13-10-2017
+
+ -Nos reunimos después del parcial de Base de Datos I, para ir or-
+ganizando lo que ya teníamos hecho, para tener un panorama de lo 
+que nos faltaba.
+ -Realizado hasta el día de la fecha:
+   
+  -Menú del juego totalmente desarrollado.
+  -Animaciones (algunas, no todas).
+  -Puntaje.
+  -Contador de Vidas.
+  -Movimiento del fondo.
+
+ -Lo que nos falta hasta el día de la fecha:
+
+  -Game Over.
+  -Sistema de niveles.
+  -Presentación de la historia.

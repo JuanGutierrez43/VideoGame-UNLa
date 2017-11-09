@@ -1,0 +1,21 @@
+Reunión: 5 ------------------------------------- Fecha: 28-10-2017
+
+ -En éste momento tenemos ya finalizado:
+  
+  -Historia del juego.
+  -Game Over.
+  -Sistema de niveles.
+
+ -Nos falta:
+   
+  -Analizar cada caso de pruebas.
+  -Realizar las pruebas unitarias.
+  -Documentación de las pruebas.
+  -Se comenzó con la documentación técnica.
+  -Cambiamos el fondo de la pantalla.
+  -Lucia agregó música.
+  -Se agregó instrucciones del uso del juego.
+  -Tenemos la idea de poner créditos al final del juego, pero no es
+algo que esté 100% decidido.
+
+ -Planificamos próxima reunión para el día 03-11-2017.

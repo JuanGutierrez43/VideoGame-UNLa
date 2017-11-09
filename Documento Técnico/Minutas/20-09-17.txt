@@ -1,0 +1,15 @@
+Reunión: 2 ------------------------------------- Fecha: 20-09-2017
+
+ -Creacón de carpetas en trello.
+ -Comenzamos a debatir sobre la funcionalidad del juego, que era
+lo que iba a hacer, etc.
+ -También nos pusimos de acuerdo para empezar a tomar conocimientos 
+sobre el manejo del GitHub ya que antes ninguno de los integrantes 
+del grupo lo habia utilizado. Luego vimos de que manera integrar 
+conocimientos sobre el lenguaje Python dado que también ninguno
+habíamos programado en dicho lenguaje. Buscamos video tutoriales
+sobre Pygame, y también aprendimos a manejarnos con trello como
+organizador de tareas.
+ -Le pusimos nombre al juego Food Racer
+ -Comenzamos con una breve historia para el juego.
+ -Creamos el BACKLOG en trello.

@@ -1,0 +1,10 @@
+Reunión: 1 ------------------------------------- Fecha: 04-09-2017
+
+ -Debatimos sobre qué plataforma de organizacón de tareas ibamos a
+usar.
+ -También en GitHub decidimos usar el repositorio creado por Juan.
+ -Buscamos ejemplos de juegos, entre ellos Mario Bros, juegos de 
+naves, flappy bird, snake.
+ -Luego debatimos sobre el tipo de juego que queríamos realizar, 
+elegimos un juego tipo Arcade, (ya que es de diseño sencillo, con-
+troles fáciles de asimilar, niveles cortos, dificultad ascendente).
