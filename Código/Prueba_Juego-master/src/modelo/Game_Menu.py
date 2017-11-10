@@ -15,7 +15,7 @@ class Game_Menu():
         self.sinluz=pygame.image.load("Imagene_Menu\letra2.png")
         self.conluz1=pygame.image.load("Imagene_Menu\letra7.png")
         self.sinluz1=pygame.image.load("Imagene_Menu\letra8.png")
-        self.menu=pygame.image.load_extended("Imagene_Menu\menu3.png")
+        self.menu=pygame.image.load_extended("Imagene_Menu\menu4.png")
         self.pos= pygame.mouse.get_pos()
         self.image = pygame.Surface([30, 30])
         self.rect = self.image.get_rect()
